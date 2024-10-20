@@ -5,7 +5,7 @@
     rgb(1, 1, 43),
     rgb(178, 178, 222),
     rgb(1, 1, 43)
-  ); /* Multicolor gradient */
+  ) ; /* Multicolor gradient */
   box-shadow: 0px 0px 2px 3px white;
   display: flex;
   justify-content: center;
@@ -20,35 +20,13 @@
 }
 
 .quote-text {
+  color: rgb(1, 1, 51);
   font-size: 25px;
   text-align: center;
   line-height: 1.5;
   transform: skewY(-4deg) translateY(10%);
-  background: linear-gradient(
-    45deg,
-    #ff0054,
-    #ffb700,
-    #4dff00,
-    #00d2ff,
-    #ff00d2
-  ); /* Multicolor gradient */
-  background-size: 300%; /* Allows the gradient to move */
+  background: rgb(66, 132, 148); /* Multicolor gradient */
   -webkit-background-clip: text; /* Clips the background to the text */
-  -webkit-text-fill-color: transparent; /* Makes the text color transparent */
-  animation: gradient-animation 5s ease infinite; /* Animation for the gradient */
-}
-
-/* Keyframe animation to move the gradient */
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 /* Right container */
