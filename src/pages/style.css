@@ -1,0 +1,210 @@
+/* Left container for quote */
+.left-container {
+  background: linear-gradient(
+    45deg,
+    rgb(1, 1, 43),
+    rgb(178, 178, 222),
+    rgb(1, 1, 43)
+  ); /* Multicolor gradient */
+  box-shadow: 0px 0px 2px 3px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-top: 30px;
+  width: 641px;
+  height: 500px;
+  transform: skewY(-5deg) translateY(0%);
+  overflow: visible;
+  z-index: 10;
+}
+
+.quote-text {
+  font-size: 25px;
+  text-align: center;
+  line-height: 1.5;
+  transform: skewY(-4deg) translateY(10%);
+  background: linear-gradient(
+    45deg,
+    #ff0054,
+    #ffb700,
+    #4dff00,
+    #00d2ff,
+    #ff00d2
+  ); /* Multicolor gradient */
+  background-size: 300%; /* Allows the gradient to move */
+  -webkit-background-clip: text; /* Clips the background to the text */
+  -webkit-text-fill-color: transparent; /* Makes the text color transparent */
+  animation: gradient-animation 5s ease infinite; /* Animation for the gradient */
+}
+
+/* Keyframe animation to move the gradient */
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Right container */
+.right-container {
+  background-color: rgb(1, 1, 43);
+  box-shadow: 0px 0px 2px 3px white; /* Multicolor gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 650px;
+  width: 570px;
+  height: 500px;
+  transform: skewY(-5deg) translateY(0%);
+  overflow: hidden;
+}
+
+/* Grid for article placeholders */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: repeat(3, 1fr); /* Three rows */
+  gap: 10px; /* Gaps between articles */
+  width: 100%;
+  height: 100%;
+}
+
+/* Keyframe animation for image movement */
+@keyframes slideImage {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply animation to images inside placeholders */
+.article-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: slideImage 5s infinite ease-in-out; /* Animation: 5s duration, infinite loop */
+  border-radius: 8px;
+}
+
+/* Individual article containers with different sizes */
+.article-1 {
+  grid-column: span 2;
+  grid-row: span 1;
+  height: 300px; /* Adjusted size */
+  width: 190px;
+  margin-left: 8px;
+  margin-top: 8px;
+  border: 2px solid transparent; /* Set to transparent */
+  background: linear-gradient(
+    45deg,
+    rgb(1, 1, 43),
+    rgb(216, 216, 222),
+    rgb(1, 1, 43)
+  ); /* Multicolor gradient */
+  background-clip: padding-box; /* Ensures border is visible */
+}
+
+.article-2 {
+  grid-column: span 1;
+  grid-row: span 2;
+  height: 300px; /* Adjusted size */
+  width: 170px;
+  margin-left: -380px;
+  margin-top: 5px;
+  border: 2px solid transparent; /* Set to transparent */
+  background: linear-gradient(
+    45deg,
+    rgb(1, 1, 43),
+    rgb(216, 216, 222),
+    rgb(1, 1, 43)
+  ); /* Multicolor gradient */
+  background-clip: padding-box; /* Ensures border is visible */
+}
+
+.article-3 {
+  grid-column: span 1;
+  grid-row: span 1;
+  height: 170px; /* Adjusted size */
+  width: 190px;
+  margin-left: 8px;
+  border: 2px solid transparent; /* Set to transparent */
+  background: linear-gradient(
+    45deg,
+    rgb(1, 1, 43),
+    rgb(216, 216, 222),
+    rgb(1, 1, 43)
+  ); /* Multicolor gradient */
+  background-clip: padding-box; /* Ensures border is visible */
+}
+
+.article-4 {
+  grid-column: span 2;
+  grid-row: span 1;
+  height: 160px; /* Adjusted size */
+  width: 185px;
+  margin-left: 205px;
+  margin-top: -470px;
+  border: 2px solid transparent; /* Set to transparent */
+  background: linear-gradient(
+    45deg,
+    rgb(1, 1, 43),
+    rgb(216, 216, 222),
+    rgb(1, 1, 43)
+  ); /* Multicolor gradient */
+  background-clip: padding-box; /* Ensures border is visible */
+}
+
+.article-5 {
+  grid-column: span 1;
+  grid-row: span 1;
+  height: 285px; /* Adjusted size */
+  width: 185px;
+  margin-top: -300px;
+  margin-left: -570px;
+  border: 2px solid transparent; /* Set to transparent */
+  background: linear-gradient(
+    45deg,
+    rgb(1, 1, 43),
+    rgb(216, 216, 222),
+    rgb(1, 1, 43)
+  ); /* Multicolor gradient */
+  background-clip: padding-box; /* Ensures border is visible */
+}
+
+.article-6 {
+  grid-column: span 1;
+  grid-row: span 2;
+  height: 170px; /* Adjusted size */
+  width: 165px;
+  margin-top: -195px;
+  margin-left: 403px;
+  border: 2px solid transparent; /* Set to transparent */
+  background: linear-gradient(
+    45deg,
+    rgb(1, 1, 43),
+    rgb(216, 216, 222),
+    rgb(1, 1, 43)
+  ); /* Multicolor gradient */
+  background-clip: padding-box; /* Ensures border is visible */
+}
+
+/* Placeholder for articles */
+.article-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
