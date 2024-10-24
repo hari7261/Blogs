@@ -1,11 +1,10 @@
-/* Left container for quote */
 .left-container {
   background: linear-gradient(
     45deg,
     rgb(1, 1, 43),
     rgb(178, 178, 222),
     rgb(1, 1, 43)
-  ) ; /* Multicolor gradient */
+  );
   box-shadow: 0px 0px 2px 3px white;
   display: flex;
   justify-content: center;
@@ -18,7 +17,6 @@
   overflow: visible;
   z-index: 10;
 }
-
 .quote-text {
   color: rgb(1, 1, 51);
   font-size: 25px;
@@ -28,7 +26,6 @@
   background: rgb(66, 132, 148); /* Multicolor gradient */
   -webkit-background-clip: text; /* Clips the background to the text */
 }
-
 /* Right container */
 .right-container {
   background-color: rgb(1, 1, 43);
@@ -43,7 +40,6 @@
   transform: skewY(-5deg) translateY(0%);
   overflow: hidden;
 }
-
 /* Grid for article placeholders */
 .article-grid {
   display: grid;
@@ -53,7 +49,6 @@
   width: 100%;
   height: 100%;
 }
-
 /* Keyframe animation for image movement */
 @keyframes slideImage {
   0% {
@@ -66,7 +61,6 @@
     transform: translateX(-100%);
   }
 }
-
 /* Apply animation to images inside placeholders */
 .article-placeholder img {
   width: 100%;
@@ -75,7 +69,6 @@
   animation: slideImage 5s infinite ease-in-out; /* Animation: 5s duration, infinite loop */
   border-radius: 8px;
 }
-
 /* Individual article containers with different sizes */
 .article-1 {
   grid-column: span 2;
@@ -93,7 +86,6 @@
   ); /* Multicolor gradient */
   background-clip: padding-box; /* Ensures border is visible */
 }
-
 .article-2 {
   grid-column: span 1;
   grid-row: span 2;
@@ -110,7 +102,6 @@
   ); /* Multicolor gradient */
   background-clip: padding-box; /* Ensures border is visible */
 }
-
 .article-3 {
   grid-column: span 1;
   grid-row: span 1;
@@ -126,7 +117,6 @@
   ); /* Multicolor gradient */
   background-clip: padding-box; /* Ensures border is visible */
 }
-
 .article-4 {
   grid-column: span 2;
   grid-row: span 1;
@@ -143,7 +133,6 @@
   ); /* Multicolor gradient */
   background-clip: padding-box; /* Ensures border is visible */
 }
-
 .article-5 {
   grid-column: span 1;
   grid-row: span 1;
@@ -160,7 +149,6 @@
   ); /* Multicolor gradient */
   background-clip: padding-box; /* Ensures border is visible */
 }
-
 .article-6 {
   grid-column: span 1;
   grid-row: span 2;
@@ -177,7 +165,6 @@
   ); /* Multicolor gradient */
   background-clip: padding-box; /* Ensures border is visible */
 }
-
 /* Placeholder for articles */
 .article-placeholder {
   display: flex;
@@ -185,4 +172,401 @@
   align-items: center;
   border-radius: 8px;
   overflow: hidden;
+}
+.main {
+  background-color: rgb(2, 2, 42);
+  border: 2px solid white;
+  color: white;
+}
+button {
+  background: rgba(0, 0, 0, 0.7); /* Transparent futuristic base */
+  color: #00ffe0; /* Neon text color */
+  border: 2px solid rgba(0, 255, 255, 0.7); /* Neon border */
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4); /* Neon glow */
+}
+button:hover::before {
+  transform: scale(1.01); /* Expand radial glow */
+}
+button:hover {
+  color: #fff; /* Text turns white on hover */
+  border-color: #00ffe0; /* Bright neon on hover */
+  transform: scale(1.2); /* Lift and zoom effect */
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.7),
+    0 0 30px rgba(0, 255, 255, 0.9); /* Enhanced glow on hover */
+}
+button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 1); /* Intense focus glow */
+}
+button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(0, 255, 255, 0.3),
+    transparent
+  );
+  opacity: 0.7;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+button:hover::after {
+  background: linear-gradient(45deg,transparent,rgba(0, 255, 255, 0.5),transparent);
+  opacity: 1; /* Brighten background effect on hover */
+}
+.but_one,
+.but_two,
+.but_three,
+.but_four,
+.but_five {
+  border-radius: 15px;
+  animation: glow-pulse 3s infinite alternate; /* Pulse animation */
+}
+.but_four{
+  letter-spacing: 1px;
+  padding-bottom: 2px;
+}
+@keyframes glow-pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2), 0 0 5px rgba(0, 255, 255, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4), 0 0 10px rgba(0, 255, 255, 0.6);
+  }
+}
+.para {
+  font-size: 25px;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 255, 255),
+    rgb(168, 240, 240),
+    rgba(0, 255, 255),
+    rgb(200, 236, 236)
+  ); /* Example gradient colors for alien technology */
+  -webkit-background-clip: text; /* Clips the background to the text */
+  -webkit-text-fill-color: transparent; /* Makes the text color transparent so the gradient shows */
+  animation: moveSkew 2s infinite alternate;
+}
+.parara {
+  box-shadow: 0px 0px 4px 4px rgba(0, 255, 255, 0.5);
+}
+
+@keyframes moveSkew {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.09;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.line-effect {
+  background-color: rgba(0, 255, 255, 0.7);
+  background: linear-gradient(180deg, cyan, magenta, yellow, lime);
+  background-size: 400% 400%;
+  animation: LineAnimation 3s ease infinite;
+}
+
+.con {
+  overflow: hidden;
+  border: 2px solid rgba(0, 255, 255, 0.7);
+  background-color: #0d1b2a;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2),
+    0 0 15px rgba(0, 255, 255, 0.2);
+}
+.con_one,
+.con_two,
+.con_three,
+.con_four,
+.con_five,
+.tech_con {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00ffe0;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Position containers */
+.con_one,
+.tech_con {
+  left: 30px;
+  top: 30px;
+}
+.con_two {
+  left: 250px;
+  top: 30px;
+}
+.con_three {
+  left: 470px;
+  top: 30px;
+}
+.con_four {
+  left: 690px;
+  top: 30px;
+}
+.con_five {
+  left: 910px;
+  top: 30px;
+}
+
+/* Floating animation for gentle up and down motion */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Scale up and elevate animation */
+@keyframes scale-elevate {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.1); /* Elevate and scale up */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.5); /* Brighter neon effect */
+  }
+}
+
+/* Apply floating effect continuously */
+.con_one,
+.con_two,
+.con_three,
+.con_four,
+.con_five,
+.tech_con {
+  animation: float 3s ease-in-out infinite;
+  border: 2px solid rgba(0, 255, 255, 0.7);
+}
+
+/* Staggered scale-elevate effect */
+.con_one,
+.tech_con {
+  animation: scale-elevate 7s ease-in-out infinite,
+    float 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
+.con_two {
+  animation: scale-elevate 7s ease-in-out infinite,
+    float 3s ease-in-out infinite;
+  animation-delay: 1.5s; /* Starts after con_one */
+}
+.con_three {
+  animation: scale-elevate 7s ease-in-out infinite,
+    float 3s ease-in-out infinite;
+  animation-delay: 3s; /* Starts after con_two */
+}
+.con_four {
+  animation: scale-elevate 7s ease-in-out infinite,
+    float 3s ease-in-out infinite;
+  animation-delay: 4.5s; /* Starts after con_two */
+}
+.five {
+  animation: scale-elevate 7s ease-in-out infinite,
+    float 3s ease-in-out infinite;
+  animation-delay: 6s; /* Starts after con_two */
+}
+.holder {
+  border: 2px solid rgba(0, 255, 255, 0.7);
+}
+.footer {
+  border: 2px solid rgba(0, 255, 255, 0.7);
+}
+
+/* Blog.css */
+
+.blog-container{
+  background: transparent;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 850px;
+  color: #fff;
+}
+/* Style for headings inside the blog */
+.blog-container h1,
+.blog-container h2,
+.blog-container h3 {
+  color: rgba(
+    0,
+    255,
+    255,
+    0.7
+  ); /* Alien-tech neon shadow color for all headings */
+  font-family: "Roboto", sans-serif; /* Modern, clean font */
+  text-shadow: 2px 2px 10px rgba(0, 255, 255, 0.6); /* Glowing neon shadow */
+}
+/* Bold for main heading (h1) */
+.blog-container h1 {
+  font-weight: bold; /* Make h1 bold */
+  background: linear-gradient(
+    90deg,
+    #00ff99,
+    #33ccff
+  ); /* Futuristic gradient */
+  -webkit-background-clip: text;
+  color: transparent; /* Apply gradient to the text */
+  animation: gradientMove 5s ease infinite; /* Animated gradient */
+}
+/* Semi-bold for subheadings (h2) */
+.blog-container h2 {
+  font-weight: 600; /* Make h2 semi-bold */
+  color: #00ffff; /* Cyan color for subheadings */
+}
+/* Semi-bold for sub-subheadings (h3) */
+.blog-container h3 {
+  font-weight: 600; /* Make h3 semi-bold */
+  color: #00ffff; /* Cyan color for subheadings */
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+.blog-container p,
+.blog-container ul,
+.blog-container li {
+  color: #e0e0e0; /* Softer white for body text */
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.8; /* Spacing for readability */
+}
+
+/* Style for blockquotes */
+.blog-container blockquote {
+  border-left: 4px solid rgba(0, 255, 255, 0.3); /* Neon quote border */
+  padding-left: 15px;
+  margin: 20px 0;
+  color: #99ccff; /* Cool light blue for blockquotes */
+  font-style: italic;
+}
+
+/* Style for links */
+.blog-container a {
+  color: #00ff99; /* Alien green for links */
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* Futuristic underline */
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+/* Hover effect for links */
+.blog-container a:hover {
+  color: #00ccff; /* Brighter hover color */
+  border-bottom: 1px solid #00ccff; /* Animated hover effect */
+}
+.footer-container {
+  height: 180px;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+  border-radius: 15px;
+  color: #fff; /* White text */
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: #00ff99; /* Alien green */
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+.social-icons a {
+  margin: 0 10px; /* Add margin to create space between icons */
+}
+
+.footer-tagline {
+  font-style: italic; /* Italic for the tagline */
+  margin-top: 10px;
+}
+
+.gradient-text-two {
+  background-image: linear-gradient(270deg, #00ff00, rgb(0, 255, 149), #00ffff);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 3s ease infinite;
+}
+.tech-holder,
+.tech-holder-two {
+  border: 2px solid rgba(0, 255, 255, 0.7);
+  background-color: rgb(2, 2, 42);
+  margin-top: 275px;
+  margin-left: 110px;
+}
+.tech-holder-two {
+  margin-top: 20px;
+}
+.tech_con {
+  background-color: rgb(2, 2, 42);
+}
+.lol {
+  cursor: move;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.lead{
+  transform: skewY(-5deg) skewX(5deg) ;
+  color: white;
+  border: 2px solid rgb(4, 1, 45);
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgb(4, 1, 45);
+}
+.lead:hover {
+  border: 2px solid rgba(0, 255, 255, 0.7);  transform: scale(1.2); /* Lift and zoom effect */
+  box-shadow: 0px 0px 15px 5px rgb(4, 1, 45); /* Enhanced glow on hover */
+}
+.lead::after {
+  background: linear-gradient(45deg,transparent,rgb(4, 1, 45, 0.8),transparent);
 }

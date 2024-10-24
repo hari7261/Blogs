@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './style.css';
 
 const Welcomepage = () => {
@@ -7,6 +9,9 @@ const Welcomepage = () => {
       {/* Left section for the quote */}
       <div className="left-container">
         <h1 className="quote-text font-semibold">Dive into Blogs, Fuel your fire, Grow Higher and Higher!</h1>
+        <Link to="/home">
+        <button className='lead h-[35px] w-[80px] mt-[30px] ml-[-350px] absolute'>Home</button>
+        </Link>
       </div>
 
       {/* Right section for articles */}
